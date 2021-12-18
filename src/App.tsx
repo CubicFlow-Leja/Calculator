@@ -6,10 +6,13 @@ import ScoreBoard from "./Components/ScoreBoard";
 import GameBlockedContext from "./Contexts/GameBlockedContext";
 import GameOver from "./Components/GameOver";
 import { ScriptElementKind } from "typescript";
+
+//DRUGI SKRIPTA
 interface ScoreParams {
   TurnsLeft: number;
   TotalFound: number;
 }
+
 function App() {
   const [Score, SetScore] = useState<ScoreParams>({
     TurnsLeft: 16,
@@ -112,9 +115,9 @@ function App() {
             {ImageUrlPairs.map((pair, index) => (
               <Key
                 key={index}
-                ImageUrl={ImageUrls[pair].toString()}
-                keyCallback={ButtonPress}
                 index={index}
+                ImageUrl={ImageUrls[pair].toString()}
+                keyCallback={() => ButtonPress(index)}
                 state={KeyStates[index]}
               />
             ))}

@@ -2,7 +2,7 @@ import React, { ReactComponentElement } from "react";
 import { useEffect, useState, useContext } from "react";
 import GameBlockedContext from "../Contexts/GameBlockedContext";
 interface KeyProps {
-  keyCallback: (index: number) => any;
+  keyCallback: (_index: number) => void;
   ImageUrl: string;
   state: number;
   index: number;
