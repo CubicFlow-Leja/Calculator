@@ -1,7 +1,8 @@
 import React, { ReactComponentElement } from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import GameBlockedContext from "../Contexts/GameBlockedContext";
 interface KeyProps {
-  keyCallback: (index: any) => any;
+  keyCallback: (index: number) => any;
   ImageUrl: string;
   state: number;
   index: number;
@@ -9,17 +10,16 @@ interface KeyProps {
 
 const Key: React.FC<KeyProps> = ({ state, index, ImageUrl, keyCallback }) => {
   const [btnclass, setbtnClass] = useState<string>("Btn2");
-  const [count, setCount] = useState<number>(0);
-
+  const [State, setState] = useState<number>(0);
+  const Blocked = useContext(GameBlockedContext);
   useEffect(() => {
-    if (count === 0) return;
-    if (btnclass === "Btn2") setbtnClass("Btn1");
-    else setbtnClass("Btn2");
-  }, [count]);
+    setState(state);
+    setbtnClass(State === 0 ? "Btn2" : "Btn1");
+  });
 
-  const callback = (index: any) => {
-    setCount(count + 1);
-    keyCallback(index);
+  const callback = () => {
+    // console.log(Blocked);
+    if (!Blocked) if (State == 0) keyCallback(index);
   };
 
   return (

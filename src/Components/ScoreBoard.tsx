@@ -1,7 +1,10 @@
 import React from "react";
 
-const ScoreBoard = () => {
-  return <div className="Clicks">Clicks Remaining</div>;
+interface ScoreParams {
+  TurnsLeft: number;
+}
+const ScoreBoard: React.FC<ScoreParams> = ({ TurnsLeft }) => {
+  return <div className="Clicks">Turns left: {TurnsLeft}</div>;
 };
 
 export default ScoreBoard;

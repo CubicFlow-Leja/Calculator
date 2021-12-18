@@ -1,30 +1,30 @@
 .Btn1{
-    transition: 1s;
+    transition: 0.1s;
     background-color: white;
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
     outline: auto;
     outline-width: 5px;
-    outline-color: black;
+    outline-color: aquamarine;;
     overflow: hidden;
 }
 
 .Btn2{
-    transition: 1s;
+    transition:  0.25s;
     background-color: black;
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
     grid-column: span 1;
     grid-row: span 1;
     outline: auto;
     outline-width: 5px;
-    outline-color: white;
+    outline-color: aquamarine;;
     overflow: hidden;
 }
 
 
 .Btn2:hover{
-    transition: 1s;
+    transition:  0.25s;
     background-color: gray;
     outline: auto;
     outline-width: 15px;
@@ -32,36 +32,50 @@
 }
 
 .BtnImage{
-    width: 50px;
+    width: 75px;
     height: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 
 .MainContainer{
     padding: 1%;
-    margin:auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    width: 550px;
-    height:550px;
-    outline: auto;
-    outline-width: 5px;
-    outline-color: white;
+    grid-row-gap: 25px;
+    justify-content:space-between;
+    align-content: center;
+    width: 500px;
+    height:475px;
+    outline:dashed;
+    outline-width: 10px;
+    outline-color:aquamarine;
 }
 
 .Background{
-    margin: auto;
+    display:grid;
+    grid-template-columns: auto;
     background-color: black;
-    width:100%;
-    height: 100%;
+    height: 97vh; 
+    width:  100%; 
+    max-height: 97vh; 
 }
 
 .Title{
     margin:auto;
-    color:white;
-    font-size:  80px;
+    color:azure;
+    font-size:  35px;
+    line-height: 55px;
     width:auto;
     text-align: center;
     -webkit-touch-callout: none;
@@ -70,6 +84,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    font-style: italic;
 }
 
 
@@ -80,19 +95,23 @@
     display: grid;
     justify-content: space-evenly;
     grid-template-columns: auto auto;
-    width: 55%;
-    height: auto;
+    width: 30%;
+    height: 80px;
+    outline: dashed;
+    outline-width: 5px;
+    outline-color: aquamarine;
 }
 
 .ResetButton{
     margin:auto;
-    display: inline-block;
-    font-size:  30px;
+    font-size:  25px;
     text-align: center;
     transition: 0.5s;
-    background-color: wheat;
-    width: 100%;
-    height: 100%;
+    font-style: italic;
+    font-weight: bold;
+    width:200px;
+    height: 50px;
+    background-color:lightslategray;
     grid-column: span 1;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -100,6 +119,9 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    outline: dashed;
+    outline-width: 2px;
+    outline-color: aquamarine;;
 }
 .ResetButton:hover{
     transition: 0.5s;
@@ -107,13 +129,14 @@
 }
 .Clicks{
     margin:auto;
-    font-size:  30px;
+    line-height: 50px;
+    font-size:  25px;
     text-align: center;
-    transition: 0.5s;
-    background-color: wheat;
-    width:100%;
-    height: 100%;
-    justify-content: center;
+    font-style: italic;;
+    font-weight: bold;
+    width:200px;
+    height: 50px;
+    background-color:lightslategray;
     grid-column: span 1;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -121,4 +144,26 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    outline: dashed;
+    outline-width: 2px;
+    outline-color: aquamarine;;
+}
+
+.GameOverScreen{
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 400px;
+    line-height: 175px;
+    background-color: black;
+    color:crimson;
+    font-size: 100px;
+    text-align: center;
+    font-style: italic;;
+    font-weight: bold;
+    text-align: center;
+    outline: dashed;
+    outline-width: 2px;
+    outline-color: aquamarine;
 }
