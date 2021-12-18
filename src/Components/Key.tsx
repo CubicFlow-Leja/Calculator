@@ -1,12 +1,13 @@
 import React, { ReactComponentElement } from "react";
 import { useEffect, useState } from "react";
-import { FaHeart } from "react-icons/fa";
 interface KeyProps {
-  keyCallback: (e: any) => any;
+  keyCallback: (index: any) => any;
   ImageUrl: string;
+  state: number;
+  index: number;
 }
 
-const Key: React.FC<KeyProps> = ({ ImageUrl, keyCallback }) => {
+const Key: React.FC<KeyProps> = ({ state, index, ImageUrl, keyCallback }) => {
   const [btnclass, setbtnClass] = useState<string>("Btn2");
   const [count, setCount] = useState<number>(0);
 
@@ -16,9 +17,9 @@ const Key: React.FC<KeyProps> = ({ ImageUrl, keyCallback }) => {
     else setbtnClass("Btn2");
   }, [count]);
 
-  const callback = (e: any) => {
+  const callback = (index: any) => {
     setCount(count + 1);
-    keyCallback(e);
+    keyCallback(index);
   };
 
   return (

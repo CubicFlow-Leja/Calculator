@@ -25,7 +25,7 @@
 
 .Btn2:hover{
     transition: 1s;
-    background-color: white;
+    background-color: gray;
     outline: auto;
     outline-width: 15px;
     outline-color: red;
