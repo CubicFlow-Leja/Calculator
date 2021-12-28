@@ -8,8 +8,8 @@ import GameOver from "./Components/GameOver";
 import SessionDetails from "./Components/SessionDetails";
 import SessionMssg from "./Components/SessionMssg";
 
-//const url = "http://localhost:3001";
-const url = "https://memorygamebackend.herokuapp.com/";
+const url = "http://localhost:3001";
+//const url = "https://memorygamebackend.herokuapp.com/";
 
 interface ButtonClickInterface {
   click1: number;
