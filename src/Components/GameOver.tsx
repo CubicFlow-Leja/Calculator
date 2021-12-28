@@ -6,7 +6,7 @@ interface VictoryParams {
 }
 const GameOver: React.FC<VictoryParams> = ({ score, Victory }) => {
   return (
-    <div className="GameOverScreen">
+    <div className="TextMain GameOverScreen">
       Score : {score} <br></br>
       {Victory ? "Won" : "Lost"}
     </div>

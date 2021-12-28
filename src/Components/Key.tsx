@@ -14,7 +14,7 @@ const Key: React.FC<KeyProps> = ({ state, index, ImageUrl, keyCallback }) => {
   const Blocked = useContext(GameBlockedContext);
   useEffect(() => {
     setState(state);
-    setbtnClass(State === 0 ? "Btn2" : "Btn1");
+    setbtnClass(State === 0 ? "Btn outline Btn2" : " Btn outline Btn1");
   });
 
   const callback = () => {
@@ -24,8 +24,8 @@ const Key: React.FC<KeyProps> = ({ state, index, ImageUrl, keyCallback }) => {
 
   return (
     <button onClick={callback} className={btnclass}>
-      {btnclass === "Btn1" && (
-        <img src={`/Imgs/${ImageUrl}.png`} className="BtnImage" />
+      {State != 0 && (
+        <img src={`/Imgs/${ImageUrl}.png`} className="BtnImage NoSelect" />
       )}
     </button>
   );
